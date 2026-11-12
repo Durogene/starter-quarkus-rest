@@ -113,4 +113,23 @@ public class UserService {
         userRepository.delete(entity);
     }
 
+    @Transactional
+    public void registerDiscordMember(
+            String discordId,
+            String username,
+            String displayName
+    ) {
+        if (userRepository.existsByDiscordId(discordId)) {
+            return;
+        }
+
+        CreateUserRequest request = new CreateUserRequest(
+                discordId,
+                username,
+                displayName
+        );
+
+        create(request);
+    }
+
 }

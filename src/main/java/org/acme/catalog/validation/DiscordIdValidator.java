@@ -1,3 +1,4 @@
+
 package org.acme.catalog.validation;
 
 import jakarta.validation.ConstraintValidator;
@@ -11,7 +12,6 @@ public class DiscordIdValidator
             String value,
             ConstraintValidatorContext context
     ) {
-
         if (value == null || value.isBlank()) {
             return false;
         }

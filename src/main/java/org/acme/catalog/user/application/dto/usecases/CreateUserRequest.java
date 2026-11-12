@@ -1,3 +1,4 @@
+
 package org.acme.catalog.user.application.dto.usecases;
 
 import jakarta.validation.constraints.NotBlank;
@@ -23,6 +24,5 @@ public record CreateUserRequest(
                 message = "Display name cannot exceed 32 characters"
         )
         String displayName
-
 ) {
 }

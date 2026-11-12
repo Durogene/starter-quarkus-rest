@@ -1,3 +1,4 @@
+
 package org.acme.catalog.validation;
 
 import jakarta.validation.Constraint;
